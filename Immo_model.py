@@ -8,7 +8,7 @@ import numpy as np
 
 class Immo_model:
 
-    def __init__(self, file1,file2):
+    def __init__(self, file1, file2):
 
         data = Data(file1, file2)
         data.tri_code_postale(codes_postals)

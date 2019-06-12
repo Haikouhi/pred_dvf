@@ -4,11 +4,6 @@ from Immo_model import *
 
 app = FlaskAPI(__name__)
 
-modele = Immo_model('valeurs-foncieres2017.csv', 'valeurs-foncieres2018.csv')
-modele.classification_tree_model()
-modele.regression_tree_model()
-modele.predict_cluster()
-
 
 @app.route("/", methods=['GET', 'POST'])
 def test():
@@ -23,6 +18,12 @@ def test():
 
 
 if __name__ == "__main__":
+
+    modele = Immo_model('valeurs-foncieres2017.csv', 'valeurs-foncieres2018.csv')
+    modele.classification_tree_model()
+    modele.regression_tree_model()
+    modele.predict_cluster()
+
     app.run(debug=True)
 
 
