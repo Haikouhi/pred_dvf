@@ -98,6 +98,6 @@ class Immo_model:
         cluster = self.pred_clus(latitude, longitude)
         res = self.regr.predict([[superficie, nb_pieces, latitude, longitude, cluster]])
 
-        return res
+        return res[0]
 
 
