@@ -1,31 +1,20 @@
-# from flask import request
-# from flask_api import FlaskAPI
-# from math import pi
+from flask import request
+from flask_api import FlaskAPI
+from math import pi
 
-# app = FlaskAPI(__name__)
-
-
-# @app.route("/", methods=['GET', 'POST'])
-# def test():
-#     lat = float(request.args[''])
-#     longi = float(request.args[''])
-#     surface = float(request.args[''])
-#     pieces = float(request.args[''])
-
-#     return {'': pi * rad**2}
+app = FlaskAPI(__name__)
 
 
+@app.route("/", methods=['GET', 'POST'])
+def test():
+    lat = float(request.args['lattiude'])
+    longi = float(request.args['longitude'])
+    surface = float(request.args['surface_reelle_bati'])
+    pieces = float(request.args['nombre_pieces_principales'])
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
+    return {'': pi * rad**2}
 
 
-
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route("/")
-def hello():
-    return "Hello World"
+if __name__ == "__main__":
+    app.run(debug=True)
 
