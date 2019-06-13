@@ -18,7 +18,6 @@ def test():
     modele.predict_cluster()
 
     res = modele.predict(surface, pieces, lat, longi)
-    print(res)
 
     return jsonify({'estimation': res})
 
